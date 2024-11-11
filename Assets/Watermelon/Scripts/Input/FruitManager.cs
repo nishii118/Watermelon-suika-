@@ -9,10 +9,12 @@ public class FruitManager : MonoBehaviour
 
     [Header("Element")]
     [SerializeField] GameObject fruitObject;
+    [SerializeField] private LineRenderer lineRenderer;
+    private GameObject fruit;
+    private Rigidbody2D fruitRb;
 
     [Header("Setting")]
     [SerializeField] private float spawnPositionY;
-    [SerializeField] private LineRenderer lineRenderer;
 
     [Header("Debug")]
     [SerializeField] private bool isGizmosEnable;
@@ -36,7 +38,6 @@ public class FruitManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            GenerateFruit();
             MouseDownCallback();
         }
         else if (Input.GetMouseButton(0))
@@ -51,25 +52,43 @@ public class FruitManager : MonoBehaviour
 
     public void MouseDownCallback()
     {
+        SetSpawnFallingLinePosition();
         DisplaySpawnLine();
+
+        GenerateFruit();
+
     }
     public void MouseCallback()
     {
-        lineRenderer.SetPosition(0, GetSpawnPosition(GetTouchPosition()));
-        lineRenderer.SetPosition(1, GetSpawnPosition(GetTouchPosition()) + Vector2.down * 15);
+        // set position for spawn falling line
+        SetSpawnFallingLinePosition();
+
+        fruit.transform.position = GetSpawnPosition(GetTouchPosition());
+
     }
     public void MouseUpCallback()
     {
         HideSpawnLine();
+
+        // set physics for fruit
+        fruitRb.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    public void SetSpawnFallingLinePosition()
+    {
+        lineRenderer.SetPosition(0, GetSpawnPosition(GetTouchPosition()));
+        lineRenderer.SetPosition(1, GetSpawnPosition(GetTouchPosition()) + Vector2.down * 15);
     }
     public void GenerateFruit()
     {
         Vector2 spawnPosition = GetSpawnPosition(GetTouchPosition());
 
         // generate fruit
-        GameObject fruit =  ObjectPool.instance.GetPoolObject();
+        fruit =  ObjectPool.instance.GetPoolObject();
         fruit.transform.position = spawnPosition;
         fruit.transform.rotation = Quaternion.identity;
+        fruitRb = fruit.GetComponent<Rigidbody2D>();
+        fruitRb.bodyType = RigidbodyType2D.Kinematic;
         fruit.SetActive(true);
     }
 
