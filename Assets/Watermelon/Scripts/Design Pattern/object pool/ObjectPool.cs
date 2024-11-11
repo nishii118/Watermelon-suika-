@@ -43,6 +43,7 @@ public class ObjectPool : MonoBehaviour
             }
         }
         GameObject tmp = Instantiate(objectToPool, transform);
+        pooledObjects.Add(tmp);
         amountToPool++;
         return tmp;
     }    
