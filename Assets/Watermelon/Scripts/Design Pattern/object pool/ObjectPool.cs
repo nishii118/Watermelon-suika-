@@ -28,7 +28,6 @@ public class ObjectPool : MonoBehaviour
         for (int i = 0; i < amountToPool; i++)
         {
             tmp = Instantiate(objectToPool, transform);
-            tmp.transform.parent = transform;
             tmp.SetActive(false);
             pooledObjects.Add(tmp);
         }
@@ -47,6 +46,6 @@ public class ObjectPool : MonoBehaviour
         tmp.SetActive(false);
         pooledObjects.Add(tmp);
         amountToPool++;
-        return tmp;
+        return pooledObjects[amountToPool - 1];
     }    
 }
