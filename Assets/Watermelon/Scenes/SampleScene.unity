@@ -197,7 +197,7 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: -6.79, z: 0}
+  - {x: 0, y: -6.89, z: 0}
   - {x: 0, y: 3.29, z: 1}
   m_Parameters:
     serializedVersion: 3
@@ -447,11 +447,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6191879999016340768, guid: f14252c32c373ef448cac05e6467da95, type: 3}
   m_PrefabInstance: {fileID: 778636570}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &970209525 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3528818556113388357, guid: 17c8d63deec5ba045ab62c222d3d20da, type: 3}
-  m_PrefabInstance: {fileID: 2139160997615445290}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1323761660
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323761661}
   - component: {fileID: 1323761662}
+  - component: {fileID: 1323761663}
   m_Layer: 0
   m_Name: FruitManager
   m_TagString: Untagged
@@ -497,10 +493,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35b977c55643994d990d68802bd33c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitObject: {fileID: 970209525}
   lineRenderer: {fileID: 162743943}
-  spawnPositionY: 3.12
+  spawnPositionY: 3.29
   isGizmosEnable: 1
+--- !u!95 &1323761663
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323761660}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4015d45340718a04ab7997a91de3e26d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1359663900
 GameObject:
   m_ObjectHideFlags: 0

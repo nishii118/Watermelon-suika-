@@ -5,10 +5,12 @@ using UnityEngine;
 public class Fruit : MonoBehaviour
 {
     Rigidbody2D fruitRb;
+
+    
     private void Awake()
     {
         fruitRb = GetComponent<Rigidbody2D>();
-        Debug.Log(fruitRb);
+        //Debug.Log(fruitRb);
 
 
     }
@@ -19,8 +21,7 @@ public class Fruit : MonoBehaviour
         transform.position = spawnPosition;
         transform.rotation = Quaternion.identity;
         fruitRb.bodyType = RigidbodyType2D.Kinematic;
-        //gameObject.SetActive(true);
-        //Debug.Log(gameObject);
+       
     }
 
     public void SetRigibody2dDynamic()

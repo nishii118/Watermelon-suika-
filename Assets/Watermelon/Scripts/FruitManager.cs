@@ -8,7 +8,6 @@ public class FruitManager : MonoBehaviour
 {
 
     [Header("Element")]
-    //[SerializeField] GameObject  fruitObject;
     [SerializeField] private LineRenderer lineRenderer;
     private Fruit fruit;
     private Rigidbody2D fruitRb;
@@ -38,10 +37,7 @@ public class FruitManager : MonoBehaviour
 
     public void PlayerInput()
     {
-        //if (!Touchscreen.current.primaryTouch.press.wasReleasedThisFrame)
-        //{
-        //    GenerateFruit();
-        //}
+        
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -71,9 +67,7 @@ public class FruitManager : MonoBehaviour
         SetSpawnFallingLinePosition();
 
         SpawnFruit();
-        Debug.Log("Mouse down call back");
         isControlling = true;
-        Debug.Log("mouse down, iscontrolling: " + isControlling);
     }
     public void MouseDragCallback()
     {
@@ -81,7 +75,6 @@ public class FruitManager : MonoBehaviour
         SetSpawnFallingLinePosition();
 
         fruit.SetPositionBeforeSpawn(GetSpawnPosition(GetTouchPosition()));
-        Debug.Log(isControlling);
 
     }
     public void MouseUpCallback()
@@ -100,7 +93,7 @@ public class FruitManager : MonoBehaviour
     public void SetSpawnFallingLinePosition()
     {
         lineRenderer.SetPosition(0, GetSpawnPosition(GetTouchPosition()));
-        lineRenderer.SetPosition(1, GetSpawnPosition(GetTouchPosition()) + Vector2.down * 15);
+        lineRenderer.SetPosition(1, GetSpawnPosition(GetTouchPosition()) + Vector2.down * 20);
     }
     public void SpawnFruit()
     {
@@ -109,11 +102,10 @@ public class FruitManager : MonoBehaviour
         // generate fruit
         GameObject fruitObject = ObjectPool.instance.GetPoolObject();
         fruitObject.SetActive(true);
-        //Debug.Log(fruitObject.name);
         fruit = fruitObject.GetComponent<Fruit>();
-        
+
         fruit.SetActiveFruit(spawnPosition);
-        
+        // spawn fruit 
     }
 
     public Vector2 GetTouchPosition()
@@ -133,14 +125,12 @@ public class FruitManager : MonoBehaviour
     public void HideSpawnLine()
     {
         lineRenderer.enabled = false;
-        //Debug.Log("hide spawn line");
     }
 
     public void DisplaySpawnLine()
     {
         lineRenderer.enabled = true;
-        //Debug.Log("display spawn line");
-        //Debug.Log(lineRenderer.enabled);
+        
     }
 
     public void StartControllTimer()
