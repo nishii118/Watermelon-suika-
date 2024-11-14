@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public static ObjectPool instance;
+    //public static ObjectPool instance;
     List<GameObject> pooledObjects;
     [SerializeField] GameObject objectToPool;
-    [SerializeField] int amountToPool; 
+    [SerializeField] int amountToPool;
 
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            //DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //    //DontDestroyOnLoad(gameObject);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
         Init();
     }
     void Init()

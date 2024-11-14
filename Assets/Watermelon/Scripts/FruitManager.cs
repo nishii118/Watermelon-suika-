@@ -10,7 +10,8 @@ public class FruitManager : MonoBehaviour
     [Header("Element")]
     [SerializeField] private LineRenderer lineRenderer;
     private Fruit fruit;
-    private Rigidbody2D fruitRb;
+    //private Rigidbody2D fruitRb;
+    [SerializeField] private ObjectPool[] fruitPools;
 
     [Header("Setting")]
     [SerializeField] private float spawnPositionY;
@@ -100,7 +101,7 @@ public class FruitManager : MonoBehaviour
         Vector2 spawnPosition = GetSpawnPosition(GetTouchPosition());
 
         // generate fruit
-        GameObject fruitObject = ObjectPool.instance.GetPoolObject();
+        GameObject fruitObject = fruitPools[Random.Range(0,3)].GetPoolObject();
         fruitObject.SetActive(true);
         fruit = fruitObject.GetComponent<Fruit>();
 
