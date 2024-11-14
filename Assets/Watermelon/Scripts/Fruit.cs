@@ -46,8 +46,7 @@ public class Fruit : MonoBehaviour
     {
         if (collision.collider.TryGetComponent(out Fruit fruit))
         {
-            Debug.Log(fruit.GetFruitType());
-            Debug.Log(this.GetFruitType());
+            
             if (fruit.GetFruitType() != fruitType)
             {
                 return;

@@ -48,4 +48,9 @@ public class ObjectPool : MonoBehaviour
         amountToPool++;
         return pooledObjects[amountToPool - 1];
     }    
+
+    public GameObject GetObjectToPool()
+    {
+        return objectToPool;
+    }
 }

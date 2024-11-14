@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class FruitManager : MonoBehaviour
+public class FruitManager : Singleton<FruitManager>
 {
 
     [Header("Element")]
     [SerializeField] private LineRenderer lineRenderer;
     private Fruit fruit;
     //private Rigidbody2D fruitRb;
-    [SerializeField] private ObjectPool[] fruitPools;
+    [SerializeField] private FruitPool[] fruitPools;
 
     [Header("Setting")]
     [SerializeField] private float spawnPositionY;
@@ -36,6 +36,15 @@ public class FruitManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        Messenger.AddListener<FruitType, Vector2>(EventKey.SPAWNMERGEFRUIT, MergeProcessCallback);
+    }
+
+    private void OnDisable()
+    {
+        Messenger.RemoveListener<FruitType, Vector2>(EventKey.SPAWNMERGEFRUIT, MergeProcessCallback);
+    }
     public void PlayerInput()
     {
         
@@ -142,6 +151,28 @@ public class FruitManager : MonoBehaviour
     public void StopControllTimer()
     {
         canControl = true;
+    }
+
+    public void MergeProcessCallback(FruitType mergedFruitType, Vector2 positionMergedFruit)
+    {
+        foreach(FruitPool fruitPool in fruitPools)
+        {
+            if(fruitPool.GetFruitType() == mergedFruitType)
+            {
+                SpawnMergedFruit(fruitPool, positionMergedFruit);
+                break;
+            }
+        }
+    }
+
+    public void SpawnMergedFruit(FruitPool fruitPool, Vector2 positionMergedFruit)
+    {
+        GameObject fruitObject = fruitPool.GetPoolObject();
+        fruitObject.SetActive(true);
+        fruit = fruitObject.GetComponent<Fruit>();
+
+        fruit.SetActiveFruit(positionMergedFruit);
+        fruit.SetRigibody2dDynamic();
     }
 
 #if UNITY_EDITOR

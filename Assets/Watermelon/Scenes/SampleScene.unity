@@ -163,11 +163,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 172333699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76a77567fd4f6e4d9d3ebe71ea17f22, type: 3}
+  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 3528818556113388357, guid: fd9d1a90727d16748a140997f0deca99, type: 3}
   amountToPool: 20
+  fruitType: 1
 --- !u!1 &200340732
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,11 +210,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 200340732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76a77567fd4f6e4d9d3ebe71ea17f22, type: 3}
+  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 3528818556113388357, guid: d8dfeeab8542ada47ad262b7c977b978, type: 3}
   amountToPool: 20
+  fruitType: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +437,7 @@ Transform:
   - {fileID: 1359663901}
   - {fileID: 172333700}
   - {fileID: 200340733}
+  - {fileID: 1651885888}
   m_Father: {fileID: 1406167750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323761660
@@ -482,11 +485,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35b977c55643994d990d68802bd33c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
   lineRenderer: {fileID: 2106321115}
   fruitPools:
   - {fileID: 1359663902}
   - {fileID: 172333701}
   - {fileID: 200340734}
+  - {fileID: 1651885889}
   spawnPositionY: 3.29
   isGizmosEnable: 1
 --- !u!1 &1359663900
@@ -530,11 +535,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359663900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76a77567fd4f6e4d9d3ebe71ea17f22, type: 3}
+  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 3528818556113388357, guid: 17c8d63deec5ba045ab62c222d3d20da, type: 3}
   amountToPool: 20
+  fruitType: 0
 --- !u!1 &1406167749
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +575,53 @@ Transform:
   - {fileID: 2103520028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1651885887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651885888}
+  - component: {fileID: 1651885889}
+  m_Layer: 0
+  m_Name: Fruit Pool 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1651885888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651885887}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 975173830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651885889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651885887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPool: {fileID: 3528818556113388357, guid: 8575d1376ec007b4487a0fd1a4dce691, type: 3}
+  amountToPool: 20
+  fruitType: 3
 --- !u!1 &1770189122
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581fdf72bd4826842acdb2e07b55826e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
 --- !u!1 &2106321113
 GameObject:
   m_ObjectHideFlags: 0
