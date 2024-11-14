@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Fruit : MonoBehaviour
 {
+    [Header("Data")]
+    [SerializeField] private FruitType type;
+
     Rigidbody2D fruitRb;
 
     
@@ -32,5 +36,23 @@ public class Fruit : MonoBehaviour
     public void SetPositionBeforeSpawn(Vector2 spawnPosition)
     {
         transform.position = spawnPosition;
+    }
+
+    public FruitType GetFruitType()
+    {
+        return type;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.TryGetComponent(out Fruit fruit))
+        {
+            if(fruit.GetFruitType() == type)
+            {
+                return;
+            } else
+            {
+
+            }
+        }
     }
 }
