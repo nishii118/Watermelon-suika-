@@ -7,5 +7,9 @@ public enum FruitType
     Blueberry,
     Cherry,
     Plum,
-    Peach
+    Banana,
+    Orange,
+    Apple, 
+    Peach,
+    Gold,
 }
