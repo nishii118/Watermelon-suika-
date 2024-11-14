@@ -5,4 +5,5 @@
     ENDGAME,
     UPDATE_UI,
     SPAWNFRUIT,
+    MERGEFRUIT,
 }
