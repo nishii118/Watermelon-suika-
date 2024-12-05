@@ -51,7 +51,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.55
   m_Material: {fileID: 6200000, guid: 2f35b43095dd21448b47717fa283442b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitType: 7
+  spriteRenderer: {fileID: 3642374011272765910}
 --- !u!95 &5055444293811891516
 Animator:
   serializedVersion: 5

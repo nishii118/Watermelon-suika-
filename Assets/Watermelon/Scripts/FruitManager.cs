@@ -17,6 +17,10 @@ public class FruitManager : Singleton<FruitManager>
     [SerializeField] private float spawnPositionY;
     private bool canControl;
     private bool isControlling;
+
+    [Header("Next Fruit Setting")]
+    private int nextFruitIndex;
+
     [Header("Debug")]
     [SerializeField] private bool isGizmosEnable;
 
@@ -26,6 +30,9 @@ public class FruitManager : Singleton<FruitManager>
 
         canControl = true;
         isControlling = false;
+
+        nextFruitIndex = Random.Range(0, 3);
+        //Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
     }
 
     void Update()
@@ -110,12 +117,17 @@ public class FruitManager : Singleton<FruitManager>
         Vector2 spawnPosition = GetSpawnPosition(GetTouchPosition());
 
         // generate fruit
-        GameObject fruitObject = fruitPools[Random.Range(0,3)].GetPoolObject();
+        GameObject fruitObject = fruitPools[nextFruitIndex].GetPoolObject();
         fruitObject.SetActive(true);
         fruit = fruitObject.GetComponent<Fruit>();
 
         fruit.SetActiveFruit(spawnPosition);
         // spawn fruit 
+
+        // gen new index for new fruit
+        nextFruitIndex = Random.Range(0, 3);
+        Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
+
     }
 
     public Vector2 GetTouchPosition()
@@ -174,7 +186,15 @@ public class FruitManager : Singleton<FruitManager>
         fruit.SetActiveFruit(positionMergedFruit);
         fruit.SetRigibody2dDynamic();
     }
+    
+    public Sprite GetNextFruitSprite()
+    {
+        GameObject fruitObject = fruitPools[nextFruitIndex].GetPoolObject();
+        Fruit nextFruit = fruitObject.GetComponent<Fruit>();
+        return nextFruit.GetSpriteRenderer().sprite;
 
+        
+    }
 #if UNITY_EDITOR
 
     public void OnDrawGizmos()

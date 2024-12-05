@@ -7,6 +7,7 @@ public class Fruit : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] private FruitType fruitType;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     Rigidbody2D fruitRb;
 
@@ -55,5 +56,10 @@ public class Fruit : MonoBehaviour
                 Messenger.Broadcast<Fruit, Fruit>(EventKey.MERGEFRUIT, fruit, this);
             }
         }
+    }
+
+    public SpriteRenderer GetSpriteRenderer()
+    {
+        return spriteRenderer;
     }
 }
