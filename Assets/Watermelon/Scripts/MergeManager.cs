@@ -34,6 +34,8 @@ public class MergeManager : Singleton<MergeManager>
         Vector2 positionMergedFruit = (sender.transform.position + otherFruit.transform.position) / 2;
         sender.gameObject.SetActive(false);
         otherFruit.gameObject.SetActive(false);
+        sender.ResetTriggerCount();
+        otherFruit.ResetTriggerCount();
 
         StartCoroutine(ResetLastSenderFruit());
 

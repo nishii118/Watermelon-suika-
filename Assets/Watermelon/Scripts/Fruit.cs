@@ -21,7 +21,10 @@ public class Fruit : MonoBehaviour
         triggerGameoverLineCount = 0;
     }
   
-
+    public void ResetTriggerCount()
+    {
+        triggerGameoverLineCount = 0;
+    }
     public void SetActiveFruit(Vector2 spawnPosition)
     {
         transform.position = spawnPosition;
@@ -66,7 +69,18 @@ public class Fruit : MonoBehaviour
             triggerGameoverLineCount++;
             if (triggerGameoverLineCount > 1)
             {
-                Messenger.Broadcast(EventKey.ONGAMEOVER);
+                Messenger.Broadcast(EventKey.INCREASEFRUITCOUNT);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Gameover Line"))
+        {
+            if (triggerGameoverLineCount > 1)
+            {
+                Messenger.Broadcast(EventKey.DECREASEFRUITCOUNT);
             }
         }
     }
