@@ -9,15 +9,16 @@ public class Fruit : MonoBehaviour
     [SerializeField] private FruitType fruitType;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    [Header("Element")]
     Rigidbody2D fruitRb;
-
+    int triggerGameoverLineCount;
     
     private void Awake()
     {
         fruitRb = GetComponent<Rigidbody2D>();
         //Debug.Log(fruitRb);
 
-
+        triggerGameoverLineCount = 0;
     }
   
 
@@ -58,6 +59,17 @@ public class Fruit : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Gameover Line"))
+        {
+            triggerGameoverLineCount++;
+            if (triggerGameoverLineCount > 1)
+            {
+                Messenger.Broadcast(EventKey.ONGAMEOVER);
+            }
+        }
+    }
     public SpriteRenderer GetSpriteRenderer()
     {
         return spriteRenderer;
