@@ -13,3 +13,10 @@ public enum FruitType
     Peach,
     Gold,
 }
+
+public enum GameState
+{
+    Game,
+    Menu,
+    Gameover,
+}
