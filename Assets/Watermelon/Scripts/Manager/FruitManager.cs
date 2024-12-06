@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+
 
 
 public class FruitManager : Singleton<FruitManager>
@@ -54,7 +54,11 @@ public class FruitManager : Singleton<FruitManager>
     }
     public void PlayerInput()
     {
-        
+        if (IsPointerOverUIObject())
+        {
+            Debug.Log("over ui object");
+            return; // Bỏ qua xử lý logic nếu đang click vào UI
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -77,7 +81,11 @@ public class FruitManager : Singleton<FruitManager>
             MouseUpCallback();
         }
     }
-
+    private bool IsPointerOverUIObject()
+    {
+        // Kiểm tra nếu con trỏ chuột ở trên UI
+        return EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+    }
     public void MouseDownCallback()
     {
         DisplaySpawnLine();
