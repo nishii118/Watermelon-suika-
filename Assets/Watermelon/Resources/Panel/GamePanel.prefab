@@ -558,13 +558,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8952406108971076501}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 8239948271229767548}
+        m_TargetAssemblyTypeName: GamePanel, Assembly-CSharp
+        m_MethodName: ClickSettingButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 2986099798289842798}
   - component: {fileID: 8239948271229767548}
   m_Layer: 0
-  m_Name: Game Panel
+  m_Name: GamePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

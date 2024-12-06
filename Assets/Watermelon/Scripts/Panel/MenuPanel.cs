@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuPanel : MonoBehaviour
+public class MenuPanel : Panel
 {
    public void ClickReloadButton()
     {
-        PanelManager.Instance.ClosePanel("Blur Panel");
-        PanelManager.Instance.ClosePanel("Menu Panel");
+        PanelManager.Instance.ClosePanel("BlurPanel");
+        PanelManager.Instance.ClosePanel("MenuPanel");
+
+        GameManager.Instance.LoadSceneByIndex(0);
     }
 }

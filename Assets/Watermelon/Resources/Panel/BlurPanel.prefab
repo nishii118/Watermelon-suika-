@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7900295633533142445}
   - component: {fileID: 7206727010010329680}
   - component: {fileID: 1611690654676148759}
+  - component: {fileID: 8622256699210181013}
   m_Layer: 0
-  m_Name: Blur Panel
+  m_Name: BlurPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,3 +76,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8622256699210181013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264085705201742113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657ef5ecf1a725c48ae0d03e165a4393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnClose: 1
