@@ -44,6 +44,7 @@ public class GameoverManager : MonoBehaviour
         {
             Debug.Log("Gameover!!!!!");
 
+            Messenger.Broadcast(EventKey.UPDATEHIGHTSCORE);
         }
     }
 

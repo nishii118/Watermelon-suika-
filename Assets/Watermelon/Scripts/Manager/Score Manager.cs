@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     private int currentScore;
     private int highScore;
     [SerializeField] private TextMeshProUGUI scoreTxt;
+    [SerializeField] private TextMeshProUGUI bestcoreTxt;
 
     private void Start()
     {
@@ -19,16 +20,34 @@ public class ScoreManager : MonoBehaviour
     private void OnEnable()
     {
         Messenger.AddListener<int>(EventKey.ADDSCORE, AddScore);
+        Messenger.AddListener(EventKey.UPDATEHIGHTSCORE, UpdateHighScore);
+
     }
 
     private void OnDisable()
     {
-        Messenger.RemoveListener<int>(EventKey.ADDSCORE, AddScore);   
+        Messenger.RemoveListener<int>(EventKey.ADDSCORE, AddScore);
+        Messenger.RemoveListener(EventKey.UPDATEHIGHTSCORE, UpdateHighScore);
     }
 
     private void AddScore(int score)
     {
         currentScore += score;
         scoreTxt.SetText(currentScore.ToString());
+
+    }
+
+    private void UpdateHighScore()
+    {
+        highScore = Mathf.Max(currentScore, highScore);
+        bestcoreTxt.text = highScore.ToString();
+
+        UpdateHighScore();
+    }
+
+    private void UpdateCurrentScore()
+    {
+        currentScore = 0;
+        scoreTxt.text = currentScore.ToString();
     }
 }
