@@ -1157,8 +1157,68 @@ Transform:
   - {fileID: 2055365896}
   - {fileID: 754588824}
   - {fileID: 1222774872}
+  - {fileID: 1635395778}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1635395777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635395778}
+  - component: {fileID: 1635395779}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635395778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635395777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1406167750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1635395779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635395777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25176be50c4a2c7479e0114241057c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  musicSounds:
+  - name: Background music 1
+    clip: {fileID: 8300000, guid: f827bdf107ef28c48a966c4ce5e4c338, type: 3}
+  - name: Background music 2
+    clip: {fileID: 8300000, guid: 2512ffe0d6281ce4fa1949e03f68b2cc, type: 3}
+  - name: Background music 3
+    clip: {fileID: 8300000, guid: d98356b53a7a82249b74852aeac8ea21, type: 3}
+  sfxSounds:
+  - name: ButtonSlimeMid
+    clip: {fileID: 8300000, guid: 310ce5a43c74cbf4588658caaa2145d0, type: 3}
+  - name: GrowPlant
+    clip: {fileID: 8300000, guid: 33650b3d3f242cb4ba8fe5884f777c3d, type: 3}
+  musicSource: {fileID: 0}
+  sfxSource: {fileID: 0}
 --- !u!1 &1651885887
 GameObject:
   m_ObjectHideFlags: 0
