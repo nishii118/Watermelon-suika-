@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 509939969177581922}
   - component: {fileID: 689104646991734727}
   - component: {fileID: 2006083600665686294}
+  - component: {fileID: 2768418529230033881}
   m_Layer: 0
   m_Name: 'Score bar '
   m_TagString: Untagged
@@ -153,6 +154,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2768418529230033881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587670706565325871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef694bb1efa39684b93caa5b0509ea6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTxt: {fileID: 5779163773936378140}
+  highscoreTxt: {fileID: 0}
 --- !u!1 &2891323233782764213
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -4, y: -50.200165}
+  m_AnchoredPosition: {x: -4, y: -50.200172}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8346602326707100907

@@ -4,13 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : Singleton<ScoreManager>
 {
     [Header("Element")]
     private int currentScore;
     private int highScore;
-    [SerializeField] private TextMeshProUGUI scoreTxt;
-    [SerializeField] private TextMeshProUGUI bestcoreTxt;
+    //[SerializeField] private TextMeshProUGUI scoreTxt;
+    //[SerializeField] private TextMeshProUGUI bestcoreTxt;
 
     private void Start()
     {
@@ -33,21 +33,32 @@ public class ScoreManager : MonoBehaviour
     private void AddScore(int score)
     {
         currentScore += score;
-        scoreTxt.SetText(currentScore.ToString());
+        Messenger.Broadcast(EventKey.OnChangeScore);
 
     }
 
     private void UpdateHighScore()
     {
         highScore = Mathf.Max(currentScore, highScore);
-        bestcoreTxt.text = highScore.ToString();
+        Messenger.Broadcast(EventKey.OnChangeHighScore);
 
-        UpdateHighScore();
+        //UpdateCurrentScore();
     }
 
     private void UpdateCurrentScore()
     {
         currentScore = 0;
-        scoreTxt.text = currentScore.ToString();
+
+        Messenger.Broadcast(EventKey.OnChangeScore);
+    }
+
+    public int GetCurrentScore()
+    {
+        return currentScore;
+    }
+
+    public int GetHighScore()
+    {
+        return highScore;
     }
 }

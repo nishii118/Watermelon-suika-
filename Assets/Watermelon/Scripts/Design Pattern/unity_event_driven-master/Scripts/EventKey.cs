@@ -13,4 +13,6 @@
     DECREASEFRUITCOUNT,
     ADDSCORE,
     UPDATEHIGHTSCORE,
+    OnChangeScore,
+    OnChangeHighScore,
 }
