@@ -1,9 +1,25 @@
 
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEditor.Build;
 
 public class GameManager : Singleton<GameManager>
 {
+    private bool isGameover = false;
+
+    private void OnEnable()
+    {
+        //Messenger.AddListener
+    }
+
+    private void SetIsGameover(bool state)
+    {
+        isGameover = state;
+    }
+    public bool GetIsGameOver()
+    {
+        return isGameover;
+    }
     public void LoadSceneByName(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
