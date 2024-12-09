@@ -12,6 +12,7 @@ public class Fruit : MonoBehaviour
     [Header("Element")]
     Rigidbody2D fruitRb;
     int triggerGameoverLineCount;
+    [SerializeField] private int scoreFruit;
     
     private void Awake()
     {
@@ -87,5 +88,9 @@ public class Fruit : MonoBehaviour
     public SpriteRenderer GetSpriteRenderer()
     {
         return spriteRenderer;
+    }
+    public int GetScoreFruit()
+    {
+        return scoreFruit;
     }
 }

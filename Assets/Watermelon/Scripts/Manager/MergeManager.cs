@@ -40,6 +40,7 @@ public class MergeManager : Singleton<MergeManager>
         StartCoroutine(ResetLastSenderFruit());
 
         Messenger.Broadcast<FruitType, Vector2>(EventKey.SPAWNMERGEFRUIT, mergedFruitType, positionMergedFruit);
+        Messenger.Broadcast<int>(EventKey.ADDSCORE, sender.GetScoreFruit());
     }
 
     IEnumerator ResetLastSenderFruit()
