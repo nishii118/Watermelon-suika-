@@ -176,10 +176,10 @@ TextureImporter:
       name: sactx-4-2048x2048-ASTC 6x6-UI_Mang-988bd08f_6
       rect:
         serializedVersion: 2
-        x: 1621
-        y: 1896
-        width: 235
-        height: 152
+        x: 1746
+        y: 1914
+        width: 106
+        height: 125
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,8 +997,8 @@ TextureImporter:
         serializedVersion: 2
         x: 1392
         y: 680
-        width: 146
-        height: 160
+        width: 188
+        height: 154
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1008,27 +1008,6 @@ TextureImporter:
       bones: []
       spriteID: d948dcf5e522edc4abc5020d2ae06208
       internalID: 1658083055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sactx-4-2048x2048-ASTC 6x6-UI_Mang-988bd08f_56
-      rect:
-        serializedVersion: 2
-        x: 1501
-        y: 740
-        width: 87
-        height: 92
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa324eff6b705ec499d04480a1b01806
-      internalID: -1958931662
       vertices: []
       indices: 
       edges: []
@@ -1247,10 +1226,10 @@ TextureImporter:
       name: sactx-4-2048x2048-ASTC 6x6-UI_Mang-988bd08f_3
       rect:
         serializedVersion: 2
-        x: 813
-        y: 1053
-        width: 135
-        height: 168
+        x: 814
+        y: 1057
+        width: 166
+        height: 162
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1357,7 +1336,7 @@ TextureImporter:
         width: 458
         height: 173
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1378,7 +1357,7 @@ TextureImporter:
         width: 867
         height: 173
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1386,6 +1365,27 @@ TextureImporter:
       bones: []
       spriteID: 795621ed1782f6946a9d2100b867307e
       internalID: -653266425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-4-2048x2048-ASTC 6x6-UI_Mang-988bd08f_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 835
+        width: 844
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b547dc6134fce24686042874eb64f4c
+      internalID: 1855121249
       vertices: []
       indices: 
       edges: []
