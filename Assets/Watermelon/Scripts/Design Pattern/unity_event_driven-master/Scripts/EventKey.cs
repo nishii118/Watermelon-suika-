@@ -15,4 +15,5 @@
     UPDATEHIGHTSCORE,
     OnChangeScore,
     OnChangeHighScore,
+    OnToggleSound,
 }
