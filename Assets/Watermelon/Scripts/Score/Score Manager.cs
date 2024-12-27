@@ -16,6 +16,7 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         currentScore = 0;
         highScore = 0;
+        Debug.Log("score manager in scoremanager script: " + this);
     }
     private void OnEnable()
     {
