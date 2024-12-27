@@ -23,7 +23,7 @@ public class AudioManager : Singleton<AudioManager>
     }
 
     public bool GetToggleState(String key) {
-        return PlayerPrefs.GetInt(key) == 1 ? true : false;    
+        return PlayerPrefs.GetInt(key, 1) == 1 ? true : false;    
     }
 
     public void ToggleState(String key) {
@@ -45,7 +45,7 @@ public class AudioManager : Singleton<AudioManager>
         if(!GetToggleState("Music")) return;
 
         Sound s = Array.Find(musicSounds, sound => sound.name == name);
-
+        Debug.Log("Sound: " + s);
         if (s == null) {
             Debug.LogWarning("Sound: " + name + " not found!");
             return;

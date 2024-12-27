@@ -8,7 +8,6 @@ public class ScoreView : MonoBehaviour
     [SerializeField] TextMeshProUGUI highscoreTxt;
     void Start()
     {
-        Debug.Log("score txt: " + scoreTxt);
 
         if (scoreTxt != null)
         {
@@ -35,7 +34,6 @@ public class ScoreView : MonoBehaviour
     }
     private void OnChangeScore()
     {
-        Debug.Log("score manager: " + ScoreManager.Instance.GetCurrentScore());
         // Debug.Log("score mang")
         scoreTxt.SetText(ScoreManager.Instance.GetCurrentScore().ToString());
     }
