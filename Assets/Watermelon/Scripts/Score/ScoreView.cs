@@ -6,8 +6,10 @@ public class ScoreView : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreTxt;
     [SerializeField] TextMeshProUGUI highscoreTxt;
-    private void OnEnable()
+    void Start()
     {
+        Debug.Log("score txt: " + scoreTxt);
+
         if (scoreTxt != null)
         {
             OnChangeScore();
@@ -16,6 +18,10 @@ public class ScoreView : MonoBehaviour
         {
             OnChangeHighScore();
         }
+    }
+    private void OnEnable()
+    {
+        
         Messenger.AddListener(EventKey.OnChangeScore, OnChangeScore);
         Messenger.AddListener(EventKey.OnChangeHighScore, OnChangeHighScore);
     }
@@ -30,7 +36,7 @@ public class ScoreView : MonoBehaviour
     private void OnChangeScore()
     {
         Debug.Log("score manager: " + ScoreManager.Instance.GetCurrentScore());
-
+        // Debug.Log("score mang")
         scoreTxt.SetText(ScoreManager.Instance.GetCurrentScore().ToString());
     }
 
