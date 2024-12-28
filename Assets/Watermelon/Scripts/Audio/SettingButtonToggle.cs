@@ -31,9 +31,9 @@ public class SettingButtonToggle : MonoBehaviour
         UpdateState();
     }
 
-    private void OnValidate()
-    {
-        image = GetComponent<Image>();
-    }
+    // private void OnValidate()
+    // {
+    //     image = GetComponent<Image>();
+    // }
 }
 

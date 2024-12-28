@@ -56,7 +56,7 @@ public class FruitManager : Singleton<FruitManager>
     {
         if (IsPointerOverUIObject())
         {
-            Debug.Log("over ui object");
+            // Debug.Log("over ui object");
             return; // Bỏ qua xử lý logic nếu đang click vào UI
         }
 

@@ -45,7 +45,6 @@ public class AudioManager : Singleton<AudioManager>
         if(!GetToggleState("Music")) return;
 
         Sound s = Array.Find(musicSounds, sound => sound.name == name);
-        Debug.Log("Sound: " + s);
         if (s == null) {
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
@@ -59,6 +58,7 @@ public class AudioManager : Singleton<AudioManager>
 
     private String GetRandomeMusic() {
         int randomIndex = UnityEngine.Random.Range(0, musicSounds.Length);
+        musicSource.clip = musicSounds[randomIndex].clip;
         return musicSounds[randomIndex].name;
     }
     public void StopMusic() {
@@ -85,6 +85,7 @@ public class AudioManager : Singleton<AudioManager>
     }
 
     public String GetCurrentMusic() {
+        Debug.Log("music name: " + musicSource.clip.name);
         return musicSource.clip.name;
     }
 }

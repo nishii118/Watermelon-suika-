@@ -133,8 +133,9 @@ GameObject:
   - component: {fileID: 5771948057989464236}
   - component: {fileID: 1252046572656387360}
   - component: {fileID: 7302075368823906426}
+  - component: {fileID: 883023815741265782}
   m_Layer: 0
-  m_Name: Button
+  m_Name: BGM Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 457.60004, y: -815}
+  m_AnchoredPosition: {x: 457.60004, y: -814.99994}
   m_SizeDelta: {x: 301.3, y: 312.2}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &5771948057989464236
@@ -242,7 +243,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1252046572656387360}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 883023815741265782}
+        m_TargetAssemblyTypeName: SettingButtonToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &883023815741265782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351745835636048155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45fd38618a6fc743a1f5da4fa504721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefKey: Music
+  spriteOn: {fileID: -87048755, guid: e7e254b19ebd27e4181f23f8ae1d7df9, type: 3}
+  spriteOff: {fileID: 1305039033, guid: e7e254b19ebd27e4181f23f8ae1d7df9, type: 3}
+  image: {fileID: 2058896513887315698}
 --- !u!1 &639317604745563474
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,8 +1000,9 @@ GameObject:
   - component: {fileID: 4144042143271007043}
   - component: {fileID: 1078842894577339171}
   - component: {fileID: 2761193019456578889}
+  - component: {fileID: 2865087453683327327}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: SFX Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1080,7 +1110,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1078842894577339171}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2865087453683327327}
+        m_TargetAssemblyTypeName: SettingButtonToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2865087453683327327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415662498828531274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45fd38618a6fc743a1f5da4fa504721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefKey: SFX
+  spriteOn: {fileID: 550270242, guid: 048c6cfea37449548b2207b69ac7c8f9, type: 3}
+  spriteOff: {fileID: 1658083055, guid: e7e254b19ebd27e4181f23f8ae1d7df9, type: 3}
+  image: {fileID: 1063485776519569575}
 --- !u!1 &3320557798520851850
 GameObject:
   m_ObjectHideFlags: 0
