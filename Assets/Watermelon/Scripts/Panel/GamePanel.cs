@@ -10,5 +10,8 @@ public class GamePanel : Panel
         //Time.timeScale = 0;
         PanelManager.Instance.OpenPanel("BlurPanel");
         PanelManager.Instance.OpenPanel("MenuPanel");
+
+        //sound 
+        ClickButton();
     }
 }

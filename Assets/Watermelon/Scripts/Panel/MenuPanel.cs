@@ -10,6 +10,8 @@ public class MenuPanel : Panel
         PanelManager.Instance.ClosePanel("MenuPanel");
 
         GameManager.Instance.LoadSceneByIndex(0);
+
+        ClickButton();
     }
 
     public void ClickExitButton()
@@ -17,12 +19,14 @@ public class MenuPanel : Panel
         PanelManager.Instance.ClosePanel("BlurPanel");
         PanelManager.Instance.ClosePanel("MenuPanel");
 
-
+        ClickButton();
     }
 
     public void ClickAchievementButton()
     {
         PanelManager.Instance.ClosePanel("MenuPanel");
         PanelManager.Instance.OpenPanel("AchievementPanel");
+
+        ClickButton();
     }
 }

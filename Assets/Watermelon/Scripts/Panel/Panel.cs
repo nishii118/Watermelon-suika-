@@ -18,4 +18,8 @@ public class Panel : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public virtual void ClickButton() {
+        Messenger.Broadcast(EventKey.ONCLICKBUTTON, "Click");
+    }
 }

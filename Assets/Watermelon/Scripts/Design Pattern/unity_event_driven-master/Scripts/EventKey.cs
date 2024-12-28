@@ -18,5 +18,6 @@
     OnToggleSound,
     DROPFRUITSOUND,
     GROWPLANT,
+    ONCLICKBUTTON,
 
 }
