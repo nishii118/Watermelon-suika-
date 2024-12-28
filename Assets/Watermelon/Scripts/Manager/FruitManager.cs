@@ -186,6 +186,9 @@ public class FruitManager : Singleton<FruitManager>
                 break;
             }
         }
+
+        // sound 
+        Messenger.Broadcast<string>(EventKey.GROWPLANT, "Grow Plant");
     }
 
     public void SpawnMergedFruit(FruitPool fruitPool, Vector2 positionMergedFruit)

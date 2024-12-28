@@ -17,5 +17,6 @@
     OnChangeHighScore,
     OnToggleSound,
     DROPFRUITSOUND,
+    GROWPLANT,
 
 }
