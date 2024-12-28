@@ -15,11 +15,13 @@ public class AudioManager : Singleton<AudioManager>
     private void OnEnable()
     {
         Messenger.AddListener<string>(EventKey.OnToggleSound, ToggleState);
+        Messenger.AddListener<string>(EventKey.DROPFRUITSOUND, PlaySFX);
     }
 
     private void OnDisable()
     {
         Messenger.RemoveListener<string>(EventKey.OnToggleSound, ToggleState);
+        Messenger.RemoveListener<string>(EventKey.DROPFRUITSOUND, PlaySFX);
     }
 
     public bool GetToggleState(String key) {

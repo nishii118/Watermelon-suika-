@@ -113,6 +113,8 @@ public class FruitManager : Singleton<FruitManager>
         StartControllTimer();
         isControlling = false;
 
+        //sound 
+        Messenger.Broadcast<string>(EventKey.DROPFRUITSOUND, "Drop Fruit");
     }
 
     public void SetSpawnFallingLinePosition()
@@ -136,6 +138,7 @@ public class FruitManager : Singleton<FruitManager>
         nextFruitIndex = Random.Range(0, 3);
         Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
 
+        
     }
 
     public Vector2 GetTouchPosition()

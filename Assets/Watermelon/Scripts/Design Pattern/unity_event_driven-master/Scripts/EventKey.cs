@@ -16,4 +16,6 @@
     OnChangeScore,
     OnChangeHighScore,
     OnToggleSound,
+    DROPFRUITSOUND,
+
 }
