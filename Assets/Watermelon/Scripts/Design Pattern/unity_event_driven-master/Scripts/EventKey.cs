@@ -20,5 +20,6 @@
     GROWPLANT,
     ONCLICKBUTTON,
     OnUpdateNameSong,
-    OnUpdateSong,
+    OnUpdateNextSong,
+    OnUpdatePreSong,
 }

@@ -68,7 +68,11 @@ public class MenuPanel : Panel
     }
 
     public void NextSong() {
-        Messenger.Broadcast(EventKey.OnUpdateSong);
+        Messenger.Broadcast(EventKey.OnUpdateNextSong);
 
+    }
+
+    public void PreSong() {
+        Messenger.Broadcast(EventKey.OnUpdatePreSong);
     }
 }

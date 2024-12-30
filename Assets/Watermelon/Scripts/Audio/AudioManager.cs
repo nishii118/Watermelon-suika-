@@ -23,8 +23,8 @@ public class AudioManager : Singleton<AudioManager>
         Messenger.AddListener<string>(EventKey.DROPFRUITSOUND, PlaySFX);
         Messenger.AddListener<string>(EventKey.GROWPLANT, PlaySFX);
         Messenger.AddListener<string>(EventKey.ONCLICKBUTTON, PlaySFX);
-        Messenger.AddListener(EventKey.OnUpdateSong, PlayNextMusic);
-
+        Messenger.AddListener(EventKey.OnUpdateNextSong, PlayNextMusic);
+        Messenger.AddListener(EventKey.OnUpdatePreSong, PlayPreMusic);
     }
 
     private void OnDisable()
@@ -33,7 +33,8 @@ public class AudioManager : Singleton<AudioManager>
         Messenger.RemoveListener<string>(EventKey.DROPFRUITSOUND, PlaySFX);
         Messenger.RemoveListener<string>(EventKey.GROWPLANT, PlaySFX);
         Messenger.RemoveListener<string>(EventKey.ONCLICKBUTTON, PlaySFX);
-        Messenger.RemoveListener(EventKey.OnUpdateSong, PlayNextMusic);
+        Messenger.RemoveListener(EventKey.OnUpdateNextSong, PlayNextMusic);
+        Messenger.RemoveListener(EventKey.OnUpdatePreSong, PlayPreMusic);
     }
 
     public bool GetToggleState(String key)
@@ -135,6 +136,21 @@ public class AudioManager : Singleton<AudioManager>
         return musicSounds[currentIndex].name;
     }
 
+    public String GetPreMusic() {
+        if (currentIndex == -1) {
+            currentIndex = musicSounds.Length;
+        }
+        currentIndex--;
+        if (!isRandom && currentIndex < 0)
+        {
+            currentIndex =  -1;
+            isRandom = true;
+            return GetRandomeMusic();
+        }
+        isRandom = false;
+        return musicSounds[currentIndex].name;
+    }
+
     public void SetCurrentIndex(int index)
     {
         currentIndex = index;
@@ -147,6 +163,12 @@ public class AudioManager : Singleton<AudioManager>
         Messenger.Broadcast<string>(EventKey.OnUpdateNameSong, GetCurrentMusic());
     }
 
+    private void PlayPreMusic()
+    {
+        PlayMusic(GetPreMusic());
+
+        Messenger.Broadcast<string>(EventKey.OnUpdateNameSong, GetCurrentMusic());
+    }
     public bool GetIsRandom() {
         return isRandom;
 
