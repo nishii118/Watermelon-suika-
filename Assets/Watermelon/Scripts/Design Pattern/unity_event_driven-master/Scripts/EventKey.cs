@@ -19,5 +19,6 @@
     DROPFRUITSOUND,
     GROWPLANT,
     ONCLICKBUTTON,
-
+    OnUpdateNameSong,
+    OnUpdateSong,
 }
