@@ -26,15 +26,29 @@ public class FruitManager : Singleton<FruitManager>
 
     void Start()
     {
-        HideSpawnLine();
+        // HideSpawnLine();
 
         canControl = true;
         isControlling = false;
 
         nextFruitIndex = Random.Range(0, 3);
+        InitGameDefault();
         //Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
     }
 
+    private void InitGameDefault() {
+        DisplaySpawnLine();
+        // SetSpawnFallingLinePosition();
+        SetSpawnFallingLinePositionInit();
+        SpawnFruitDefault();
+    }
+
+    private void InitGame() {
+        DisplaySpawnLine();
+        SetSpawnFallingLinePosition();
+        // SetSpawnFallingLinePositionInit();
+        SpawnFruit();
+    }
     void Update()
     {
         if (canControl)
@@ -88,10 +102,10 @@ public class FruitManager : Singleton<FruitManager>
     }
     public void MouseDownCallback()
     {
-        DisplaySpawnLine();
-        SetSpawnFallingLinePosition();
+        // DisplaySpawnLine();
+        // SetSpawnFallingLinePosition();
 
-        SpawnFruit();
+        // SpawnFruit();
         isControlling = true;
     }
     public void MouseDragCallback()
@@ -112,7 +126,8 @@ public class FruitManager : Singleton<FruitManager>
         canControl = false;
         StartControllTimer();
         isControlling = false;
-
+        HideSpawnLine();
+        InitGame();
         //sound 
         Messenger.Broadcast<string>(EventKey.DROPFRUITSOUND, "Drop Fruit");
     }
@@ -122,9 +137,15 @@ public class FruitManager : Singleton<FruitManager>
         lineRenderer.SetPosition(0, GetSpawnPosition(GetTouchPosition()));
         lineRenderer.SetPosition(1, GetSpawnPosition(GetTouchPosition()) + Vector2.down * 20);
     }
-    public void SpawnFruit()
+
+    private void SetSpawnFallingLinePositionInit() {
+        Vector2 linePositionDefault = new Vector2(0, spawnPositionY);
+        lineRenderer.SetPosition(0, linePositionDefault);
+        lineRenderer.SetPosition(1, linePositionDefault + Vector2.down * 20);
+    }
+    public void SpawnFruitDefault()
     {
-        Vector2 spawnPosition = GetSpawnPosition(GetTouchPosition());
+        Vector2 spawnPosition = new Vector2(0, spawnPositionY);
 
         // generate fruit
         GameObject fruitObject = fruitPools[nextFruitIndex].GetPoolObject();
@@ -139,6 +160,22 @@ public class FruitManager : Singleton<FruitManager>
         Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
 
         
+    }
+
+    public void SpawnFruit() {
+        Vector2 spawnPosition = GetSpawnPosition(GetTouchPosition());
+
+        // generate fruit
+        GameObject fruitObject = fruitPools[nextFruitIndex].GetPoolObject();
+        fruitObject.SetActive(true);
+        fruit = fruitObject.GetComponent<Fruit>();
+
+        fruit.SetActiveFruit(spawnPosition);
+        // spawn fruit 
+
+        // gen new index for new fruit
+        nextFruitIndex = Random.Range(0, 3);
+        Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
     }
 
     public Vector2 GetTouchPosition()
@@ -168,7 +205,7 @@ public class FruitManager : Singleton<FruitManager>
 
     public void StartControllTimer()
     {
-        Invoke("StopControllTimer", 0.5f);
+        Invoke("StopControllTimer", 1f);
     }
 
     public void StopControllTimer()

@@ -1,7 +1,7 @@
 
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEditor.Build;
+
 
 public class GameManager : Singleton<GameManager>
 {

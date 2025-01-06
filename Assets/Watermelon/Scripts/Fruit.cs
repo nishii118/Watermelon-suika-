@@ -58,7 +58,7 @@ public class Fruit : MonoBehaviour
                 return;
             } else
             {
-                Messenger.Broadcast<Fruit, Fruit>(EventKey.MERGEFRUIT, fruit, this);
+                // Messenger.Broadcast<Fruit, Fruit>(EventKey.MERGEFRUIT, fruit, this);
             }
         }
     }
