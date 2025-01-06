@@ -58,7 +58,7 @@ public class Fruit : MonoBehaviour
                 return;
             } else
             {
-                // Messenger.Broadcast<Fruit, Fruit>(EventKey.MERGEFRUIT, fruit, this);
+                Messenger.Broadcast<Fruit, Fruit>(EventKey.MERGEFRUIT, fruit, this);
             }
         }
     }
@@ -92,5 +92,13 @@ public class Fruit : MonoBehaviour
     public int GetScoreFruit()
     {
         return scoreFruit;
+    }
+
+    public bool CheckVelocity() {
+        if (fruitRb.velocity.magnitude < 0.1f) {
+            Debug.Log("Velocity: " + fruitRb.velocity.magnitude);
+            return true;
+        } 
+        return false;
     }
 }

@@ -1,4 +1,5 @@
 ﻿
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -36,14 +37,16 @@ public class FruitManager : Singleton<FruitManager>
         //Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
     }
 
-    private void InitGameDefault() {
+    private void InitGameDefault()
+    {
         DisplaySpawnLine();
         // SetSpawnFallingLinePosition();
         SetSpawnFallingLinePositionInit();
         SpawnFruitDefault();
     }
 
-    private void InitGame() {
+    private void InitGame()
+    {
         DisplaySpawnLine();
         SetSpawnFallingLinePosition();
         // SetSpawnFallingLinePositionInit();
@@ -90,7 +93,7 @@ public class FruitManager : Singleton<FruitManager>
                 MouseDownCallback();
             }
         }
-        else if (Input.GetMouseButtonUp(0) ) 
+        else if (Input.GetMouseButtonUp(0))
         {
             MouseUpCallback();
         }
@@ -123,13 +126,15 @@ public class FruitManager : Singleton<FruitManager>
         // set physics for fruit
         fruit.SetRigibody2dDynamic();
 
+        Messenger.Broadcast<string>(EventKey.DROPFRUITSOUND, "Drop Fruit");
+
         canControl = false;
         StartControllTimer();
+        // StartCoroutine(WaitForFruitToStop());
         isControlling = false;
-        HideSpawnLine();
-        InitGame();
+        // HideSpawnLine();
         //sound 
-        Messenger.Broadcast<string>(EventKey.DROPFRUITSOUND, "Drop Fruit");
+        // Messenger.Broadcast<string>(EventKey.DROPFRUITSOUND, "Drop Fruit");
     }
 
     public void SetSpawnFallingLinePosition()
@@ -138,7 +143,8 @@ public class FruitManager : Singleton<FruitManager>
         lineRenderer.SetPosition(1, GetSpawnPosition(GetTouchPosition()) + Vector2.down * 20);
     }
 
-    private void SetSpawnFallingLinePositionInit() {
+    private void SetSpawnFallingLinePositionInit()
+    {
         Vector2 linePositionDefault = new Vector2(0, spawnPositionY);
         lineRenderer.SetPosition(0, linePositionDefault);
         lineRenderer.SetPosition(1, linePositionDefault + Vector2.down * 20);
@@ -159,10 +165,11 @@ public class FruitManager : Singleton<FruitManager>
         nextFruitIndex = Random.Range(0, 3);
         Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
 
-        
+
     }
 
-    public void SpawnFruit() {
+    public void SpawnFruit()
+    {
         Vector2 spawnPosition = GetSpawnPosition(GetTouchPosition());
 
         // generate fruit
@@ -200,24 +207,37 @@ public class FruitManager : Singleton<FruitManager>
     public void DisplaySpawnLine()
     {
         lineRenderer.enabled = true;
-        
+
     }
 
     public void StartControllTimer()
     {
-        Invoke("StopControllTimer", 1f);
+        Invoke("StopControllTimer", 0.5f);
     }
 
     public void StopControllTimer()
     {
         canControl = true;
+        InitGame();
+
     }
 
+    private IEnumerator WaitForFruitToStop()
+    {
+         // Lấy Rigidbody2D của fruit hiện tại
+        while (fruit.CheckVelocity()) // Đợi đến khi fruit gần như đứng yên
+        {
+            yield return null; // Chờ 1 frame
+        }
+
+        InitGame(); // Khởi tạo fruit mới
+        canControl = true;
+    }
     public void MergeProcessCallback(FruitType mergedFruitType, Vector2 positionMergedFruit)
     {
-        foreach(FruitPool fruitPool in fruitPools)
+        foreach (FruitPool fruitPool in fruitPools)
         {
-            if(fruitPool.GetFruitType() == mergedFruitType)
+            if (fruitPool.GetFruitType() == mergedFruitType)
             {
                 SpawnMergedFruit(fruitPool, positionMergedFruit);
                 break;
@@ -232,19 +252,19 @@ public class FruitManager : Singleton<FruitManager>
     {
         GameObject fruitObject = fruitPool.GetPoolObject();
         fruitObject.SetActive(true);
-        fruit = fruitObject.GetComponent<Fruit>();
+        Fruit newFruit = fruitObject.GetComponent<Fruit>();
 
-        fruit.SetActiveFruit(positionMergedFruit);
-        fruit.SetRigibody2dDynamic();
+        newFruit.SetActiveFruit(positionMergedFruit);
+        newFruit.SetRigibody2dDynamic();
     }
-    
+
     public Sprite GetNextFruitSprite()
     {
         GameObject fruitObject = fruitPools[nextFruitIndex].GetPoolObject();
         Fruit nextFruit = fruitObject.GetComponent<Fruit>();
         return nextFruit.GetSpriteRenderer().sprite;
 
-        
+
     }
 #if UNITY_EDITOR
 
