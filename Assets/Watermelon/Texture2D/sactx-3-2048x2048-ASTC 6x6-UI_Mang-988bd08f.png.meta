@@ -223,7 +223,7 @@ TextureImporter:
         width: 164
         height: 153
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,6 +231,69 @@ TextureImporter:
       bones: []
       spriteID: 931792559097ebe4eb47032a8f2e2dc6
       internalID: 550270242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1089
+        width: 794
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274962a018e8550479a9fff15fc07b85
+      internalID: -2015586803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_7
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 0
+        width: 488
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24facb7ad562d0443a349bddf8981b35
+      internalID: -1741203049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 488
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a38f57a05fc7ff4c909cf0d68c15e8c
+      internalID: -1391232149
       vertices: []
       indices: 
       edges: []
@@ -252,6 +315,9 @@ TextureImporter:
       sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_3: -1783192774
       sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_4: -749960349
       sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_5: 550270242
+      sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_6: -2015586803
+      sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_7: -1741203049
+      sactx-3-2048x2048-ASTC 6x6-UI_Mang-988bd08f_8: -1391232149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

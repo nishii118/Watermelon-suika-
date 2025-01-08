@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5b1087c22c79c428e9927b693ec5d7, type: 3}
+  m_Name: Skin1
+  m_EditorClassIdentifier: 
+  fruitPools:
+  - {fileID: 5560004742540492063, guid: 3c6720976c50d194080da9f8c10d4cde, type: 3}
+  - {fileID: 5859276286084062523, guid: 74cd02b421fd2f7419a28cf57d2d6a54, type: 3}
+  - {fileID: 7774400307493270868, guid: 62586277df8c8454cb0624ba686ba9c5, type: 3}
+  - {fileID: 4408839786653252653, guid: 6f6c94e40c8c38d4bbc94a07251336dc, type: 3}
+  - {fileID: 9130815534768961610, guid: fd18d6d8e28abd24c84a0b42cc3efaaf, type: 3}
+  - {fileID: 5143276320315463087, guid: 77c34f8d9a901eb4bb8e12f7f9e705c8, type: 3}
+  - {fileID: 5481887673724497880, guid: 3b0b1978e54a9fd459528dedd6599e19, type: 3}
+  - {fileID: 4253396772937912, guid: 9b3f43d79dc7536448882ebd812dfd0f, type: 3}
+  - {fileID: 4253396772937912, guid: 279e9eaebfd7e774bbcec844c7578a04, type: 3}
+  - {fileID: 4253396772937912, guid: ff2a788770ea32341a001dd62d074197, type: 3}
+  - {fileID: 4253396772937912, guid: 2f634ecf50b63a148aaac0f4b6fc1b13, type: 3}
+  skinName: Fruit

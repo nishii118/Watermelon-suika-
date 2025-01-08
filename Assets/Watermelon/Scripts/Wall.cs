@@ -15,7 +15,7 @@ public class Wall : MonoBehaviour
         Camera mainCamera = Camera.main;
 
         float halfHorizontalSize = mainCamera.orthographicSize / aspectRatio;
-        Debug.Log(halfHorizontalSize);
+        // Debug.Log(halfHorizontalSize);
         rightWall.transform.position = new Vector3(halfHorizontalSize + .1f, 0, 0);
         leftWall.transform.position = -rightWall.transform.position;
     }

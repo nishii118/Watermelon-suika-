@@ -200,100 +200,6 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
---- !u!1 &172333699
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 172333700}
-  - component: {fileID: 172333701}
-  m_Layer: 0
-  m_Name: Fruit Pool 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &172333700
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172333699}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 975173830}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &172333701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172333699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 3528818556113388357, guid: fd9d1a90727d16748a140997f0deca99, type: 3}
-  amountToPool: 20
-  fruitType: 1
---- !u!1 &200340732
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 200340733}
-  - component: {fileID: 200340734}
-  m_Layer: 0
-  m_Name: Fruit Pool 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &200340733
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200340732}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 975173830}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &200340734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200340732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 3528818556113388357, guid: d8dfeeab8542ada47ad262b7c977b978, type: 3}
-  amountToPool: 20
-  fruitType: 2
 --- !u!1 &238195847
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,53 +361,6 @@ Transform:
   - {fileID: 1930460077}
   m_Father: {fileID: 1770189123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &401418337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 401418338}
-  - component: {fileID: 401418339}
-  m_Layer: 0
-  m_Name: Fruit Pool 7
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &401418338
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401418337}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 975173830}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &401418339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401418337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 3528818556113388357, guid: 6e94b87152ce4db40acb9d35f2f19db1, type: 3}
-  amountToPool: 20
-  fruitType: 6
 --- !u!1 &497086024
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,53 +568,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &720224396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 720224397}
-  - component: {fileID: 720224398}
-  m_Layer: 0
-  m_Name: Fruit Pool 8
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &720224397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720224396}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 975173830}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &720224398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720224396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 3528818556113388357, guid: c25842de752c78942a41f69c11998bd2, type: 3}
-  amountToPool: 20
-  fruitType: 7
 --- !u!1 &754588823
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +621,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770189123}
     m_Modifications:
+    - target: {fileID: 2167386781106290827, guid: f14252c32c373ef448cac05e6467da95, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0205946
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167386781106290827, guid: f14252c32c373ef448cac05e6467da95, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.010297358
+      objectReference: {fileID: 0}
     - target: {fileID: 2167386781106290827, guid: f14252c32c373ef448cac05e6467da95, type: 3}
       propertyPath: m_LayerOverridePriority
       value: -1
@@ -1148,7 +968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 975173830}
   m_Layer: 0
-  m_Name: Fruit pools
+  m_Name: Fruit pools container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1162,20 +982,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975173829}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1359663901}
-  - {fileID: 172333700}
-  - {fileID: 200340733}
-  - {fileID: 1651885888}
-  - {fileID: 1909935781}
-  - {fileID: 2043114465}
-  - {fileID: 401418338}
-  - {fileID: 720224397}
-  m_Father: {fileID: 1406167750}
+  m_Children: []
+  m_Father: {fileID: 1323761661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &987695497
 GameObject:
@@ -1415,6 +1227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2106321114}
+  - {fileID: 975173830}
   m_Father: {fileID: 1406167750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1323761662
@@ -1431,15 +1244,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
   lineRenderer: {fileID: 2106321115}
-  fruitPools:
-  - {fileID: 1359663902}
-  - {fileID: 172333701}
-  - {fileID: 200340734}
-  - {fileID: 1651885889}
-  - {fileID: 1909935782}
-  - {fileID: 2043114466}
-  - {fileID: 401418339}
-  - {fileID: 720224398}
+  fruitPools: []
+  currentSkinSO: {fileID: 11400000, guid: de6bead031285d64b9c22b7533497b69, type: 2}
+  fruitPoolsContainer: {fileID: 975173830}
   spawnPositionY: 3
   isGizmosEnable: 1
 --- !u!114 &1323761663
@@ -1468,53 +1275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
---- !u!1 &1359663900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1359663901}
-  - component: {fileID: 1359663902}
-  m_Layer: 0
-  m_Name: Fruit Pool 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1359663901
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359663900}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 975173830}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1359663902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359663900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 3528818556113388357, guid: 17c8d63deec5ba045ab62c222d3d20da, type: 3}
-  amountToPool: 20
-  fruitType: 0
 --- !u!1 &1406167749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,14 +1305,62 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1323761661}
-  - {fileID: 975173830}
   - {fileID: 2103520028}
   - {fileID: 2055365896}
   - {fileID: 754588824}
   - {fileID: 1222774872}
   - {fileID: 1635395778}
+  - {fileID: 1441934720}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1441934719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1441934720}
+  - component: {fileID: 1441934721}
+  m_Layer: 0
+  m_Name: ShopPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1441934720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441934719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1406167750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441934721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441934719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbcf8219cd680e4e9e6eba5cadb78d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinSOs:
+  - {fileID: 11400000, guid: 74af56407a77a014fbabd9e46a4ffba3, type: 2}
+  - {fileID: 11400000, guid: de6bead031285d64b9c22b7533497b69, type: 2}
+  skins: []
 --- !u!1 &1635395777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,53 +1425,6 @@ MonoBehaviour:
   musicSource: {fileID: 2052413227}
   sfxSource: {fileID: 238195849}
   isRandom: 1
---- !u!1 &1651885887
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1651885888}
-  - component: {fileID: 1651885889}
-  m_Layer: 0
-  m_Name: Fruit Pool 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1651885888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651885887}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 975173830}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1651885889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651885887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 3528818556113388357, guid: 8575d1376ec007b4487a0fd1a4dce691, type: 3}
-  amountToPool: 20
-  fruitType: 3
 --- !u!1 &1770189122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,53 +1477,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightWall: {fileID: 2070369450}
   leftWall: {fileID: 3036614351643026412}
---- !u!1 &1909935780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1909935781}
-  - component: {fileID: 1909935782}
-  m_Layer: 0
-  m_Name: Fruit Pool 5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1909935781
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909935780}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 975173830}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1909935782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909935780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 3528818556113388357, guid: 3b26f40a68777a34cadabd12149debb8, type: 3}
-  amountToPool: 20
-  fruitType: 4
 --- !u!1 &1930460076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,53 +1639,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2043114464
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2043114465}
-  - component: {fileID: 2043114466}
-  m_Layer: 0
-  m_Name: Fruit Pool 6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2043114465
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043114464}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 975173830}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2043114466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043114464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126093172490a574c9bdeaa05f62590f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 3528818556113388357, guid: 49001cb31e2c2bb4ba5d7571d43d9c6a, type: 3}
-  amountToPool: 20
-  fruitType: 5
 --- !u!1 &2052413225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,6 +2093,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5942537414185950704, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
   m_PrefabInstance: {fileID: 7905146513549248491}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2118606885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8239948271229767548, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
+  m_PrefabInstance: {fileID: 7905146513549248491}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc175613fc3230542b440b8f604169cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3036614351643026411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2635,6 +2313,34 @@ PrefabInstance:
     - target: {fileID: 5942537414185950704, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238917176514167469, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238917176514167469, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238917176514167469, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2118606885}
+    - target: {fileID: 7238917176514167469, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238917176514167469, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickShopButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238917176514167469, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GamePanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238917176514167469, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8952406108971076501, guid: 1675f516c9f87f943aa2dc51d8224802, type: 3}
       propertyPath: m_Name

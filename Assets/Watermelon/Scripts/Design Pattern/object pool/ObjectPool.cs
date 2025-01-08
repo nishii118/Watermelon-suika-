@@ -8,19 +8,12 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] GameObject objectToPool;
     [SerializeField] int amountToPool;
 
-    void Awake()
+     void Awake()
     {
-        //if (instance == null)
-        //{
-        //    instance = this;
-        //    //DontDestroyOnLoad(gameObject);
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //}
         Init();
+        
     }
+   
     void Init()
     {
         pooledObjects = new List<GameObject>();
@@ -35,6 +28,10 @@ public class ObjectPool : MonoBehaviour
 
     public GameObject GetPoolObject()
     {
+        if (pooledObjects == null)
+        {
+            return null;
+        }
         for (int i = 0; i < pooledObjects.Count;i++)
         {
             if (pooledObjects[i].activeInHierarchy == false)

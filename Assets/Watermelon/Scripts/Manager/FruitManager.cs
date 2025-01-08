@@ -1,5 +1,7 @@
 ﻿
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,7 +14,11 @@ public class FruitManager : Singleton<FruitManager>
     [SerializeField] private LineRenderer lineRenderer;
     private Fruit fruit;
     //private Rigidbody2D fruitRb;
-    [SerializeField] private FruitPool[] fruitPools;
+    [SerializeField] List<FruitPool> fruitPools = new List<FruitPool>();
+    // [SerializeField] private SkinSO[] skinSOs;
+    [SerializeField] private SkinSO currentSkinSO;
+
+    [SerializeField] private Transform fruitPoolsContainer;
 
     [Header("Setting")]
     [SerializeField] private float spawnPositionY;
@@ -25,8 +31,31 @@ public class FruitManager : Singleton<FruitManager>
     [Header("Debug")]
     [SerializeField] private bool isGizmosEnable;
 
+    // private override void Awake()
+    // {
+    //     InitializeFruitPools();
+    // }
+    private void InitializeFruitPools()
+    {
+        if (currentSkinSO == null) return;
+        // fruitPools = currentSkinSO.GetFruitPools();
+
+
+        foreach (FruitPool fruitPool in currentSkinSO.GetFruitPools())
+        {
+            if (fruitPool != null)
+            {
+                GameObject fruitPoolInstance = Instantiate(fruitPool.gameObject, fruitPoolsContainer);
+                FruitPool fruitPoolScript = fruitPoolInstance.GetComponent<FruitPool>();
+                fruitPools.Add(fruitPoolScript);
+            }
+        }
+        Debug.Log(fruitPools);
+    }
     void Start()
     {
+        InitializeFruitPools();
+        Debug.Log("init fruit pools");
         // HideSpawnLine();
 
         canControl = true;
@@ -34,6 +63,7 @@ public class FruitManager : Singleton<FruitManager>
 
         nextFruitIndex = Random.Range(0, 3);
         InitGameDefault();
+        Debug.Log("init game default");
         //Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
     }
 
@@ -54,7 +84,7 @@ public class FruitManager : Singleton<FruitManager>
     }
     void Update()
     {
-        if (canControl)
+        if (canControl && !IsPointerOverUIObject())
         {
             PlayerInput();
         }
@@ -63,11 +93,15 @@ public class FruitManager : Singleton<FruitManager>
     private void OnEnable()
     {
         Messenger.AddListener<FruitType, Vector2>(EventKey.SPAWNMERGEFRUIT, MergeProcessCallback);
+        Messenger.AddListener(EventKey.StopPlaying, StopPlaying);
+        Messenger.AddListener(EventKey.ResumePlaying, ResumePlaying);
     }
 
     private void OnDisable()
     {
         Messenger.RemoveListener<FruitType, Vector2>(EventKey.SPAWNMERGEFRUIT, MergeProcessCallback);
+        Messenger.RemoveListener(EventKey.StopPlaying, StopPlaying);
+        Messenger.RemoveListener(EventKey.ResumePlaying, ResumePlaying);
     }
     public void PlayerInput()
     {
@@ -154,6 +188,7 @@ public class FruitManager : Singleton<FruitManager>
         Vector2 spawnPosition = new Vector2(0, spawnPositionY);
 
         // generate fruit
+
         GameObject fruitObject = fruitPools[nextFruitIndex].GetPoolObject();
         fruitObject.SetActive(true);
         fruit = fruitObject.GetComponent<Fruit>();
@@ -224,7 +259,7 @@ public class FruitManager : Singleton<FruitManager>
 
     private IEnumerator WaitForFruitToStop()
     {
-         // Lấy Rigidbody2D của fruit hiện tại
+        // Lấy Rigidbody2D của fruit hiện tại
         while (fruit.CheckVelocity()) // Đợi đến khi fruit gần như đứng yên
         {
             yield return null; // Chờ 1 frame
@@ -265,6 +300,15 @@ public class FruitManager : Singleton<FruitManager>
         return nextFruit.GetSpriteRenderer().sprite;
 
 
+    }
+
+    private void StopPlaying()
+    {
+        canControl = false;
+    }
+
+    private void ResumePlaying() {
+        canControl = true;
     }
 #if UNITY_EDITOR
 

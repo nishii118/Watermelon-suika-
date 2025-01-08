@@ -11,7 +11,10 @@ public enum FruitType
     Orange,
     Apple, 
     Peach,
+    Coconut,
+    Gang,
     Gold,
+    Final,
 }
 
 public enum GameState

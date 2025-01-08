@@ -361,6 +361,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-UI_Mang-988bd08f_1
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 537
+        width: 490
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff107be009ddaa74893acc20713f8f03
+      internalID: 1018800466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -22,4 +22,6 @@
     OnUpdateNameSong,
     OnUpdateNextSong,
     OnUpdatePreSong,
+    StopPlaying,
+    ResumePlaying,
 }

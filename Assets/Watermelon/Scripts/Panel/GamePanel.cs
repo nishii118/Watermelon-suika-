@@ -14,4 +14,11 @@ public class GamePanel : Panel
         //sound 
         ClickButton();
     }
+
+    public void ClickShopButton() {
+        PanelManager.Instance.OpenPanel("BlurPanel");
+        PanelManager.Instance.OpenPanel("ShopPanel");
+
+        ClickButton();
+    }
 }
