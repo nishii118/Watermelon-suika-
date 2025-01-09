@@ -25,7 +25,6 @@ public class MergeManager : Singleton<MergeManager>
         lastSenderFruit = sender;
 
         ProcessMergeFruit(sender, otherFruit);
-        Debug.Log("Collision detected by: " + sender.name);
     }
     
     private void ProcessMergeFruit(Fruit sender, Fruit otherFruit)

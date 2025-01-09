@@ -18,13 +18,12 @@ public class PanelManager : Singleton<PanelManager>
     {
         if (IsExisted(name))
         {
-            Debug.Log("exist panel");
             return panels[name];
         }
         //Load panel len tu resources
-        Debug.Log("get panel");
+        // Debug.Log("get panel");
         Panel panel = Resources.Load<Panel>("Panel/" + name);
-        Debug.Log("panel: " + panel.name);
+        // Debug.Log("panel: " + panel.name);
         Panel newPanel = Instantiate(panel, transform);
         newPanel.name = name;
         newPanel.gameObject.SetActive(false);

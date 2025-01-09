@@ -24,4 +24,7 @@
     OnUpdatePreSong,
     StopPlaying,
     ResumePlaying,
+    SKIN_SELECTED,
+    ONCHANGESKIN,
+    ONRESETCURRENTSCORE,
 }

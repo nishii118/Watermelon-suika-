@@ -50,6 +50,13 @@ public class MenuPanel : Panel
         ClickButton();
     }
 
+    public void ClickShopButton() {
+        PanelManager.Instance.ClosePanel("MenuPanel");
+        PanelManager.Instance.OpenPanel("ShopPanel");
+
+        ClickButton();
+    }
+
     public void OnUpdateNameSong(string songName) {
         
         if (PlayerPrefs.GetInt("Music", 1) == 1) {

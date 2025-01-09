@@ -11,4 +11,9 @@ public class SkinSO : ScriptableObject
     {
         return fruitPools;
     }
+
+    public string GetSkinName()
+    {
+        return skinName;
+    }
 }

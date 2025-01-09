@@ -35,4 +35,19 @@ public class ShopPanel : Panel
 
         ClickButton();
     }
+
+    public void OnClickAchivementButton() {
+        PanelManager.Instance.ClosePanel("ShopPanel");
+        PanelManager.Instance.OpenPanel("AchievementPanel");
+
+        ClickButton();
+    }
+
+
+    public void OnClickSettingButton() {
+        PanelManager.Instance.ClosePanel("ShopPanel");
+        PanelManager.Instance.OpenPanel("MenuPanel");
+
+        ClickButton();
+    }
 }

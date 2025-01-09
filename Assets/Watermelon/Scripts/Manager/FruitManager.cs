@@ -40,7 +40,15 @@ public class FruitManager : Singleton<FruitManager>
         if (currentSkinSO == null) return;
         // fruitPools = currentSkinSO.GetFruitPools();
 
-
+        foreach (FruitPool fruitPool in fruitPools)
+        {
+            if (fruitPool != null && fruitPool.gameObject != null)
+            {
+                Destroy(fruitPool.gameObject);
+            }
+        }
+        fruitPools.Clear();
+        Debug.Log(fruitPools);
         foreach (FruitPool fruitPool in currentSkinSO.GetFruitPools())
         {
             if (fruitPool != null)
@@ -50,12 +58,12 @@ public class FruitManager : Singleton<FruitManager>
                 fruitPools.Add(fruitPoolScript);
             }
         }
-        Debug.Log(fruitPools);
+        // Debug.Log(fruitPools);
     }
     void Start()
     {
         InitializeFruitPools();
-        Debug.Log("init fruit pools");
+        // Debug.Log("init fruit pools");
         // HideSpawnLine();
 
         canControl = true;
@@ -63,7 +71,7 @@ public class FruitManager : Singleton<FruitManager>
 
         nextFruitIndex = Random.Range(0, 3);
         InitGameDefault();
-        Debug.Log("init game default");
+        // Debug.Log("init game default");
         //Messenger.Broadcast(EventKey.UPDATENEXTFRUITSPRITEHINT);
     }
 
@@ -95,6 +103,7 @@ public class FruitManager : Singleton<FruitManager>
         Messenger.AddListener<FruitType, Vector2>(EventKey.SPAWNMERGEFRUIT, MergeProcessCallback);
         Messenger.AddListener(EventKey.StopPlaying, StopPlaying);
         Messenger.AddListener(EventKey.ResumePlaying, ResumePlaying);
+        Messenger.AddListener<SkinSO>(EventKey.ONCHANGESKIN, OnChangeSkin);
     }
 
     private void OnDisable()
@@ -102,6 +111,7 @@ public class FruitManager : Singleton<FruitManager>
         Messenger.RemoveListener<FruitType, Vector2>(EventKey.SPAWNMERGEFRUIT, MergeProcessCallback);
         Messenger.RemoveListener(EventKey.StopPlaying, StopPlaying);
         Messenger.RemoveListener(EventKey.ResumePlaying, ResumePlaying);
+        Messenger.RemoveListener<SkinSO>(EventKey.ONCHANGESKIN, OnChangeSkin);
     }
     public void PlayerInput()
     {
@@ -307,8 +317,24 @@ public class FruitManager : Singleton<FruitManager>
         canControl = false;
     }
 
-    private void ResumePlaying() {
+    private void ResumePlaying()
+    {
         canControl = true;
+    }
+
+    private void OnChangeSkin(SkinSO skinSO)
+    {
+        currentSkinSO = skinSO;
+        Debug.Log("Change skin and current skin: " + currentSkinSO.name);
+        InitializeFruitPools();
+
+        canControl = true;
+        isControlling = false;
+
+        nextFruitIndex = Random.Range(0, 3);
+        InitGameDefault();
+
+        Messenger.Broadcast(EventKey.ONRESETCURRENTSCORE);
     }
 #if UNITY_EDITOR
 

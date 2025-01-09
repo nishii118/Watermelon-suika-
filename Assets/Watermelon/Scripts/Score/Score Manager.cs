@@ -21,6 +21,7 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         Messenger.AddListener<int>(EventKey.ADDSCORE, AddScore);
         Messenger.AddListener(EventKey.UPDATEHIGHTSCORE, UpdateHighScore);
+        Messenger.AddListener(EventKey.ONRESETCURRENTSCORE, OnResetCurrentScore);
 
     }
 
@@ -61,4 +62,12 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         return highScore;
     }
+
+    private void OnResetCurrentScore()
+    {
+        currentScore = 0;
+        Messenger.Broadcast(EventKey.OnChangeScore);
+    }
+
+    
 }

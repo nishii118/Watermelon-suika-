@@ -19,4 +19,12 @@ public class AchievementPanel : Panel
 
         ClickButton();
     }   
+
+    public void ClickShopButton()
+    {
+        PanelManager.Instance.ClosePanel("AchievementPanel");
+        PanelManager.Instance.OpenPanel("ShopPanel");
+
+        ClickButton();
+    }
 }

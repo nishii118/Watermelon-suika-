@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 72727840, guid: e7e254b19ebd27e4181f23f8ae1d7df9, type: 3}
+  m_Sprite: {fileID: 336032891, guid: e7e254b19ebd27e4181f23f8ae1d7df9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 336032891, guid: e7e254b19ebd27e4181f23f8ae1d7df9, type: 3}
+  m_Sprite: {fileID: 72727840, guid: e7e254b19ebd27e4181f23f8ae1d7df9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -879,6 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnClose: 1
+  isDynamicPanel: 1
   nameSongTxt: {fileID: 3640627807703551512}
 --- !u!1 &2272196757182413963
 GameObject:
