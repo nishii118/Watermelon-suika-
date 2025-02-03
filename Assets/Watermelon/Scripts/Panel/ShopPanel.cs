@@ -19,9 +19,9 @@ public class ShopPanel : Panel
     }
 
     private void GenerateSkin() {
-        GameObject[] skins = Resources.LoadAll<GameObject>("Skins");
-        foreach(GameObject skin in skins) {
-            GameObject skinObj = Instantiate(skin, content);
+        Skin[] skins = Resources.LoadAll<Skin>("Skins");
+        foreach(Skin skin in skins) {
+            Skin skinObj = Instantiate(skin, content);
             // skinObj.transform.SetParent(transform);
             // skinObj.transform.localScale = Vector3.one;
         }

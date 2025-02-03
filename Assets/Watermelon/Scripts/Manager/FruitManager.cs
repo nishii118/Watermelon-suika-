@@ -144,8 +144,21 @@ public class FruitManager : Singleton<FruitManager>
     }
     private bool IsPointerOverUIObject()
     {
-        // Kiểm tra nếu con trỏ chuột ở trên UI
-        return EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+        if (EventSystem.current == null) return false;
+
+        // Kiểm tra xem có phần tử UI nào đang được chọn không (Button, Panel, v.v.)
+        if (EventSystem.current.currentSelectedGameObject != null)
+        {
+            return true;
+        }
+
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = Input.touchCount > 0 ? (Vector2)Input.GetTouch(0).position : (Vector2)Input.mousePosition;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+
+        return results.Count > 0;
     }
     public void MouseDownCallback()
     {
